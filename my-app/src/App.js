@@ -8,8 +8,7 @@ import About from './components/About';
 import {
   BrowserRouter as Router,
   Routes,
-  Route,
-  Link
+  Route
 } from 'react-router-dom';
 
 function App() {
@@ -33,7 +32,7 @@ function App() {
     if(mode==="primary")
     {
       setMode("dark")
-      document.body.style.backgroundColor="grey"
+      document.body.style.backgroundColor="#3d4666"
         setText("Light-mode")
        showAlert("Dark mode enabled","success")
       

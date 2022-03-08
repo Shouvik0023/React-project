@@ -65,7 +65,7 @@ export default function TextForm(props) {
       <>
       <div className={`container text-${props.mode==='primary'?'dark':'light'}`}>
       <div >
-          <h3 className='my-3'>{props.heading}</h3>
+          <h3 className='my-3 text-primary'>{props.heading}</h3>
   <div className="mb-3">
    
  
@@ -85,14 +85,14 @@ export default function TextForm(props) {
     
  </div>
  <div>
-     <h2>your text summary-</h2>
+     <h2 className='text-danger'>your text summary-</h2>
 
      <p>{text.split(" ").length} words {text.length} characters</p>
      <p><strong>Reading Time-</strong>{0.008*text.split(" ").length} Minutes</p>
  </div>
  <div>
-     <h2>preview-</h2>
-     <p>{text.length>0?text:"Enter your text to preview here."}</p>
+     <h2 className='text-warning'>preview-</h2>
+     <p> <em> {text.length>0?text:"Enter your text to preview here."}</em></p>
  </div>
           </div>
      
