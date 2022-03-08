@@ -31,7 +31,7 @@ export default function Navbar(props) {
           <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
           <button className="btn btn-info" type="submit">Search</button>
         </form>
-        <button className={`btn btn-warning mx-2 text-dark`} onClick={props.togglemode}>{props.text}</button></div>
+        <button className={`btn btn-warning mx-2 text-dark my-1`} onClick={props.togglemode}>{props.text}</button></div>
       </div>
      
   </nav>);

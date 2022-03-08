@@ -76,19 +76,19 @@ export default function TextForm(props) {
     <textarea className={`form-control bg-${props.mode==='primary'?'light':'dark'} text-${props.mode==='primary'?'dark':'light'}`} id="mytext" placeholder={props.placehodl} value={text} onChange={handleonchange} rows="8"></textarea>
   </div>
  
-      <button className={`btn btn-${props.mode==='primary'?'primary':'dark'} mx-1`} onClick={handleClickup}>change to uppercase</button>
-      <button className={`btn btn-${props.mode==='primary'?'primary':'dark'} mx-2`} onClick={handleClicklc}>change to lowercase</button>
-      <button className={`btn btn-${props.mode==='primary'?'primary':'dark'} mx-1`} onClick={handleCopy}>copy text</button>
-      <button className={`btn btn-${props.mode==='primary'?'primary':'dark'} mx-2`} onClick={handleremovespace}>remove extra spaces</button>
+      <button disabled={text.length===0} className={`btn btn-${props.mode==='primary'?'primary':'dark'} mx-1 my-1`} onClick={handleClickup}>change to uppercase</button>
+      <button disabled={text.length===0} className={`btn btn-${props.mode==='primary'?'primary':'dark'} mx-2 my-1`} onClick={handleClicklc}>change to lowercase</button>
+      <button disabled={text.length===0} className={`btn btn-${props.mode==='primary'?'primary':'dark'} mx-1 my-1`} onClick={handleCopy}>copy text</button>
+      <button disabled={text.length===0} className={`btn btn-${props.mode==='primary'?'primary':'dark'} mx-2 my-1`} onClick={handleremovespace}>remove extra spaces</button>
+      <button disabled={text.length===0} className={`btn btn-${props.mode==='primary'?'primary':'dark'} mx-1 my-1`} onClick={handleClickclear}>clear text</button>
       {/* <button className="btn btn-info mx-1" onClick={handlecc}>camel-case</button> */}
-      <button className={`btn btn-${props.mode==='primary'?'primary':'dark'} mx-1`} onClick={handleClickclear}>clear text</button>
     
  </div>
  <div>
      <h2 className='text-danger'>your text summary-</h2>
 
-     <p>{text.split(" ").length} words {text.length} characters</p>
-     <p><strong>Reading Time-</strong>{0.008*text.split(" ").length} Minutes</p>
+     <p>{text.split(" ").filter((element)=>{return element.length!==0}).length} words {text.length} characters</p>
+     <p><strong>Reading Time-</strong>{0.008*text.split(" ").filter((element)=>{return element.length!==0}).length} Minutes</p>
  </div>
  <div>
      <h2 className='text-warning'>preview-</h2>
