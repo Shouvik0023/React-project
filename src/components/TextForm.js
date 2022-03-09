@@ -33,6 +33,7 @@ export default function TextForm(props) {
             let newText= document.getElementById("mytext");
             newText.select();
              navigator.clipboard.writeText(newText.value);
+             document.getSelection().removeAllRanges();
              props.showalert("copied","success")
          }   
        
@@ -65,11 +66,11 @@ export default function TextForm(props) {
       <>
       <div className={`container text-${props.mode==='primary'?'dark':'light'}`}>
       <div >
-          <h3 className='my-3 text-primary'>{props.heading}</h3>
+          <h3 className='my-2 text-primary'>{props.heading}</h3>
   <div className="mb-3">
    
  
-    <label htmlFor="mytext" className="form-label">Enter your Text</label>
+    <label htmlFor="mytext" className="form-label"/>
 
     {/*to write a javascript in HTML we use "{}" and create object we use "{{}}"*/}
 
@@ -85,13 +86,13 @@ export default function TextForm(props) {
     
  </div>
  <div>
-     <h2 className='text-danger'>your text summary-</h2>
+     <h2 className='text-primary'>Count The Words-</h2>
 
      <p>{text.split(" ").filter((element)=>{return element.length!==0}).length} words {text.length} characters</p>
      <p><strong>Reading Time-</strong>{0.008*text.split(" ").filter((element)=>{return element.length!==0}).length} Minutes</p>
  </div>
  <div>
-     <h2 className='text-warning'>preview-</h2>
+     <h2 className='text-primary'>preview-</h2>
      <p> <em> {text.length>0?text:"Enter your text to preview here."}</em></p>
  </div>
           </div>

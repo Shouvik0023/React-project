@@ -11,7 +11,7 @@ export default function Navbar(props) {
      
      
       <a className="navbar-brand" href="/">
-        <img src="Texticon.png" alt="" width="30" height="24" className="d-inline-block align-text-top bg-light mx-2"/>
+        <img src="Texticon.png" alt="" width="20" height="24" className="d-inline-block align-text-top bg-light mx-2" style={{borderRadius: "5px"}}/>
        <a href="/" className={`text-${props.mode==='primary'?'dark':'light'}`}>{props.title}</a> 
       </a>
     
@@ -31,7 +31,10 @@ export default function Navbar(props) {
           <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
           <button className="btn btn-info" type="submit">Search</button>
         </form>
-        <button className={`btn btn-warning mx-2 text-dark my-1`} onClick={props.togglemode}>{props.text}</button></div>
+        <div className="d-flex">
+          <div className="bg-primary mx-2" style={{height: "40px", width: "40px", borderRadius: "10px", border: "2px solid black"}}></div>
+          </div>
+        <button className="btn btn-warning  text-dark my-1" onClick={props.togglemode}>{props.text}</button></div>
       </div>
      
   </nav>);
