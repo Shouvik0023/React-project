@@ -30,16 +30,17 @@ export default function TextForm(props) {
             }
 
          const handleCopy=()=>{
-            let newText= document.getElementById("mytext");
-            newText.select();
-             navigator.clipboard.writeText(newText.value);
-             document.getSelection().removeAllRanges();
+            // let newText= document.getElementById("mytext");
+            // newText.select();
+            //  navigator.clipboard.writeText(newText.value);
+            //  document.getSelection().removeAllRanges();
+            navigator.clipboard.writeText(text);
              props.showalert("copied","success")
          }   
        
 
          const handleremovespace=()=>{
-             let newText=text.split(/[ ]+/)
+             let newText=text.split(/\s+/)
              setText(newText.join(" "))
              props.showalert("extra space removed","success")
          }
@@ -88,7 +89,7 @@ export default function TextForm(props) {
  <div>
      <h2 className='text-primary'>Count The Words-</h2>
 
-     <p>{text.split(" ").filter((element)=>{return element.length!==0}).length} words {text.length} characters</p>
+     <p>{text.split(/\s+/).filter((element)=>{return element.length!==0}).length} words {text.length} characters</p>
      <p><strong>Reading Time-</strong>{0.008*text.split(" ").filter((element)=>{return element.length!==0}).length} Minutes</p>
  </div>
  <div>

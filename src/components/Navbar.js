@@ -6,14 +6,14 @@ export default function Navbar(props) {
         //props is used to set the value to the components. 
     /*Template literals are literals delimited with backticks (`), allowing embedded expressions called substitutions.*/
 
-    return(<nav className={`navbar navbar-expand-lg navbar-${props.mode} bg-${props.mode} text-light`}>
+    return(<nav className={`navbar navbar-expand-lg navbar-${props.mode} bg-${props.mode} text-light`} >
     <div className="container-fluid">
      
      
-      <a className="navbar-brand" href="/">
+      <h1 className="navbar-brand"  href="/">
         <img src="Texticon.png" alt="" width="20" height="24" className="d-inline-block align-text-top bg-light mx-2" style={{borderRadius: "5px"}}/>
        <a href="/" className={`text-${props.mode==='primary'?'dark':'light'}`}>{props.title}</a> 
-      </a>
+      </h1>
     
       <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span className="navbar-toggler-icon"></span>
