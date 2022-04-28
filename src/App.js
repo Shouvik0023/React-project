@@ -59,9 +59,9 @@ function App() {
    
    <div className="container">
    <Routes>
+          <Route exact path="/" element={ <TextForm  showalert={showAlert} heading="TextUtils for word manipulation-" mode={mode} placehodl="Enter Your Text"/>}/>
           <Route exact path="/about" element={ <About mode={mode} />}/>
           
-          <Route exact path="/" element={ <TextForm  showalert={showAlert} heading="TextUtils for word manipulation-" mode={mode} placehodl="Enter Your Text"/>}/>
          
     </Routes>
    </div>
