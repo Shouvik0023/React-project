@@ -54,7 +54,7 @@ function App() {
   return (
   <>
   <Router>
-    <Navbar title="TextUtils" links="About" mode={mode} togglemode={toggleMode} text={text} />  {/*title,about,togglemode are props  */}
+    <Navbar title="Change-Text" links="About" mode={mode} togglemode={toggleMode} text={text} />  {/*title,about,togglemode are props  */}
     <Alert alert={alert}/>
    
    <div className="container">

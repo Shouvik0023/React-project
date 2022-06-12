@@ -1,6 +1,7 @@
 
 import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom';
+import logo from "../images/Texticon.png"
 export default function Navbar(props) {
 
         //props is used to set the value to the components. 
@@ -11,7 +12,7 @@ export default function Navbar(props) {
      
      
       <h1 className="navbar-brand"  href="/">
-        <img src="Texticon.png" alt="" width="20" height="24" className="d-inline-block align-text-top bg-light mx-2" style={{borderRadius: "5px"}}/>
+        <img src={logo} alt=""  className="d-inline-block align-text-top bg-primary mx-2" style={{borderRadius: "5px",height: "30px", width: "30px"}}/>
        <a href="/" className={`text-${props.mode==='primary'?'dark':'light'}`}>{props.title}</a> 
       </h1>
     
