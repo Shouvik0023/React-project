@@ -1,6 +1,7 @@
 
 import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom';
+import logo from "../images/Texticon.png"
 export default function Navbar(props) {
 
         //props is used to set the value to the components. 
@@ -11,8 +12,8 @@ export default function Navbar(props) {
      
      
       <h1 className="navbar-brand"  href="/">
-        <img src="Texticon.png" alt="" width="20" height="24" className="d-inline-block align-text-top bg-light mx-2" style={{borderRadius: "5px"}}/>
-       <a href="/" className={`text-${props.mode==='primary'?'dark':'light'}`}>{props.title}</a> 
+        <img src={logo} alt="" width="30" height="30" className="d-inline-block align-text-top bg-primary mx-2" style={{borderRadius: "5px"}}/>
+       <a  href="/" className={`text-${props.mode==='primary'?'dark':'light'} navbar-brand mx-2`}>{props.title}</a> 
       </h1>
     
       <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
