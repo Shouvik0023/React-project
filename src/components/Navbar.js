@@ -12,13 +12,8 @@ export default function Navbar(props) {
      
      
       <h1 className="navbar-brand"  href="/">
-<<<<<<< HEAD
         <img src={logo} alt="" width="30" height="30" className="d-inline-block align-text-top bg-primary mx-2" style={{borderRadius: "5px"}}/>
        <a  href="/" className={`text-${props.mode==='primary'?'dark':'light'} navbar-brand mx-2`}>{props.title}</a> 
-=======
-        <img src={logo} alt=""  className="d-inline-block align-text-top bg-primary mx-2" style={{borderRadius: "5px",height: "30px", width: "30px"}}/>
-       <a href="/" className={`text-${props.mode==='primary'?'dark':'light'}`}>{props.title}</a> 
->>>>>>> 447cdb03207e8b8861e1d7a9e3c14a1e88252955
       </h1>
     
       <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -35,11 +30,11 @@ export default function Navbar(props) {
         </ul>
         <form className="d-flex">
           <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
-          <button className="btn btn-info" type="submit">Search</button>
+          <button className="btn btn-info mx-2" type="submit">Search</button>
         </form>
-        <div className="d-flex">
+        {/* <div className="d-flex">
           <div className="bg-primary mx-2" style={{height: "40px", width: "40px", borderRadius: "10px", border: "2px solid black"}}></div>
-          </div>
+          </div> */}
         <button className="btn btn-warning  text-dark my-1" onClick={props.togglemode}>{props.text}</button></div>
       </div>
      
