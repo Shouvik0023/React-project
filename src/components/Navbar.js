@@ -28,10 +28,10 @@ export default function Navbar(props) {
             <Link className={`nav-link active text-${props.mode==='primary'?'dark':'light'}`} to="/about">{props.links}</Link>
           </li>
         </ul>
-        <form className="d-flex">
+        {/* <form className="d-flex">
           <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
           <button className="btn btn-info mx-2" type="submit">Search</button>
-        </form>
+        </form> */}
         {/* <div className="d-flex">
           <div className="bg-primary mx-2" style={{height: "40px", width: "40px", borderRadius: "10px", border: "2px solid black"}}></div>
           </div> */}
