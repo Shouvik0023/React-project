@@ -12,8 +12,13 @@ export default function Navbar(props) {
      
      
       <h1 className="navbar-brand"  href="/">
+<<<<<<< HEAD
         <img src={logo} alt="" width="30" height="30" className="d-inline-block align-text-top bg-primary mx-2" style={{borderRadius: "5px"}}/>
        <a  href="/" className={`text-${props.mode==='primary'?'dark':'light'} navbar-brand mx-2`}>{props.title}</a> 
+=======
+        <img src={logo} alt=""  className="d-inline-block align-text-top bg-primary mx-2" style={{borderRadius: "5px",height: "30px", width: "30px"}}/>
+       <a href="/" className={`text-${props.mode==='primary'?'dark':'light'}`}>{props.title}</a> 
+>>>>>>> 447cdb03207e8b8861e1d7a9e3c14a1e88252955
       </h1>
     
       <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
